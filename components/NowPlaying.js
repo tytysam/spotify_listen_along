@@ -5,13 +5,13 @@ class NowPlaying extends React.PureComponent {
     super();
     this.state = {
       start: Date.now(),
-      currentPosition: 0,
+      currentPosition: 0
     };
     this.timer = null;
     this.tick = () => {
       this.setState({
         currentPosition:
-          Date.now() - this.state.start + (this.props.position || 0),
+          Date.now() - this.state.start + (this.props.position || 0)
       });
     };
   }
@@ -22,7 +22,7 @@ class NowPlaying extends React.PureComponent {
     ) {
       this.setState({
         start: Date.now(),
-        currentPosition: 0,
+        currentPosition: 0
       });
     }
   }
@@ -41,56 +41,6 @@ class NowPlaying extends React.PureComponent {
     const userName = this.props.user.display_name || this.props.user.id;
     return (
       <div className="now-playing">
-        <style jsx>{`
-          .now-playing {
-            background-color: #424d58;
-            color: #fff;
-            height: 250px;
-            position: relative;
-            width: 100%;
-          }
-          .now-playing__text {
-            padding: 40px;
-          }
-          .now-playing__bd {
-            padding-left: 30px;
-          }
-          .now-playing__track-name {
-            font-size: 2em;
-            padding-top: 1.2em;
-          }
-          .now-playing__artist-name {
-            font-size: 1.2em;
-            padding-bottom: 2em;
-            padding-top: 0.5em;
-          }
-          .now-playing__user {
-            padding-top: 0.5em;
-          }
-          .now-playing__progress_bar {
-            bottom: 0;
-            background-color: #222;
-            height: 5px;
-            position: absolute;
-            width: 100%;
-          }
-          .media,
-          .media__bd {
-            overflow: hidden;
-            _overflow: visible;
-            zoom: 1;
-          }
-          .media .media__img {
-            float: left;
-            margin-right: 10px;
-          }
-          .user-image {
-            border-radius: 50%;
-          }
-          .user-name {
-            line-height: 30px;
-          }
-        `}</style>
         <div className="now-playing__text media">
           <div className="media__img">
             <img
@@ -104,7 +54,7 @@ class NowPlaying extends React.PureComponent {
               {this.props.track.name}
             </div>
             <div className="now-playing__artist-name">
-              {this.props.track.artists.map((a) => a.name).join(", ")}
+              {this.props.track.artists.map(a => a.name).join(", ")}
             </div>
             <div className="media__img">
               <img
@@ -113,7 +63,7 @@ class NowPlaying extends React.PureComponent {
                   (this.props.user.images &&
                     this.props.user.images.length &&
                     this.props.user.images[0].url) ||
-                  "/static/user-icon.png"
+                  "/images/user-icon.svg"
                 }
                 width="30"
                 height="30"
