@@ -9,19 +9,21 @@ const getNameFromUser = user => {
 };
 
 const Header = ({ session, muted, mutePlayback, unmutePlayback, login }) => (
-  <div className="header-container">
-    <Link href="/">
-      <a className="link-base main-link">
-        <img
-          src="/images/listen-along-wordmark-dark.svg"
-          height="75"
-          alt="Listen Along wordmark"
-        />
-      </a>
-    </Link>
-    {session.user ? (
-      <div className="media user-header">
-        <div className="media__img">
+  <nav className="navbar sticky-top navbar-expand-lg navbar-light">
+    <ul className="navbar-nav header mr-auto mx-5">
+      <li className="nav-item mx-3 p-2">
+        <Link href="/">
+          <a className="link-base main-link nav-link">
+            <img
+              src="/images/listen-along-wordmark-dark.svg"
+              height="65"
+              alt="Listen Along wordmark"
+            />
+          </a>
+        </Link>
+      </li>
+      {session.user ? (
+        <li className="nav-item mx-3 p-2">
           <img
             className="user-image"
             src={
@@ -34,33 +36,29 @@ const Header = ({ session, muted, mutePlayback, unmutePlayback, login }) => (
             height="30"
             alt={getNameFromUser(session.user)}
           />
-        </div>
-        <div className="user-name media__bd">
-          {getNameFromUser(session.user)}
-        </div>
-      </div>
-    ) : (
-      <button
-        className="btn--base btn--login"
-        style={{ float: "right" }}
-        onClick={login}
-      >
-        <FormattedMessage id="login" />
-      </button>
-    )}
-    {session.user ? (
-      <div className="playback-control">
-        <button
-          className="btn--base btn--dark"
-          onClick={() => {
-            muted ? unmutePlayback() : mutePlayback();
-          }}
-        >
-          {muted ? "Unmute" : "Mute"}
-        </button>
-      </div>
-    ) : null}
-  </div>
+          <div className="user-name">{getNameFromUser(session.user)}</div>
+        </li>
+      ) : (
+        <li className="nav-item mx-3 p-2">
+          <button className="btn--base btn--login" onClick={login}>
+            <FormattedMessage id="login" />
+          </button>
+        </li>
+      )}
+      {session.user ? (
+        <li className="nav-item mx-3 p-2">
+          <button
+            className="btn--base btn--dark"
+            onClick={() => {
+              muted ? unmutePlayback() : mutePlayback();
+            }}
+          >
+            {muted ? "Unmute" : "Mute"}
+          </button>
+        </li>
+      ) : null}
+    </ul>
+  </nav>
 );
 
 const mapDispatchToProps = dispatch => ({
