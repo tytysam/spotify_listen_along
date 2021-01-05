@@ -1,19 +1,10 @@
-import Header from './Header';
-import Head from 'next/head';
+import Header from "./Header";
+import Head from "next/head";
 
 const Layout = props => (
-  <div>
-    <style jsx>{`
-      div {
-        color: #333;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-size: 15px;
-      }
-    `}</style>
+  <div className="layout-base">
     <Header />
-    <div>
-      {props.children}
-    </div>
+    <div>{props.children}</div>
   </div>
 );
 
