@@ -20,11 +20,6 @@ class Queue extends React.PureComponent {
           </p>
         ) : (
           <table className="queue">
-            <style jsx>{`
-              .queue {
-                max-width: 550px;
-              }
-            `}</style>
             <tbody>
               {items.map((i, index) => (
                 <QueueItem
