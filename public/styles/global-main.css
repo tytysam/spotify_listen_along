@@ -4,6 +4,10 @@
 // ============================ //
 */
 
+* {
+  /* padding: 5px; */
+}
+
 :root {
   --primaryColorLight: #fdfbf5;
   --primaryColorDark: #202020;
@@ -73,6 +77,11 @@ rest of the MVP finalized
 // ================= //
 */
 
+.navbar {
+  background-color: var(--primaryColorLight);
+  box-shadow: 0px 3px 15px rgba(32, 32, 32, 0.2);
+}
+
 .wordmark-container {
   display: flex;
   justify-content: center;
@@ -95,13 +104,6 @@ rest of the MVP finalized
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.link-base {
-  line-height: 30px;
-}
-
-.main-link {
 }
 
 .header {
@@ -208,16 +210,24 @@ rest of the MVP finalized
   border: 1px solid var(--primaryColorDark);
   border-radius: 10px;
   color: var(--primaryColorDark);
-  height: 55vh;
+  min-height: 350px;
 
-  min-width: 500px;
+  width: 800px;
   position: relative;
   width: 90%;
 
   margin: 10px auto;
 }
 
-.now-playing__text {
+.now-playing__img img {
+  width: auto;
+
+  max-height: 275px;
+}
+
+.now-playing__details {
+  width: 60%;
+  margin-left: 25px;
   padding: 40px;
 }
 
@@ -300,14 +310,12 @@ tr .queue-item-table-data {
   line-height: 30px;
 }
 
-.media,
-.media__bd {
+.media {
   overflow: hidden;
   _overflow: visible;
   zoom: 1;
 }
 
-.media .media__img {
-  float: left;
+.media__img {
   margin-right: 10px;
 }
