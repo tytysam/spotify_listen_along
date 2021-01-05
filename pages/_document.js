@@ -19,22 +19,15 @@ export default class IntlDocument extends Document {
         <Head>
           <meta
             name="description"
-            content="A collaborative queue where you propose and vote what's going to play next. Use your Spotify account to log in"
+            content="Listen Along is bringing back collaborative listening rooms. Intimate opportunities to share and experience music with your friends. A shared queue can be added to and edited by anyone present in the listening room. Vote songs up the queue and jam synchronously together via Spotify—-even when you can't be together."
           />
-          <link rel="shortcut icon" href="/static/c-icon-128.png" />
+          <link
+            rel="shortcut icon"
+            href="/images/listen-along-wordmark-dark.svg"
+          />
           <meta
             name="viewport"
             content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
-          />
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-39254352-3"
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html:
-                "window.dataLayer = window.dataLayer || []; function gtag(){window.dataLayer.push(arguments)} gtag('js', new Date()); gtag('config', 'UA-39254352-3');"
-            }}
           />
         </Head>
         <body className="custom_class">
