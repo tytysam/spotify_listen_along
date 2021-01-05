@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import withRedux from "next-redux-wrapper";
 import Layout from "../components/MyLayout.js";
@@ -12,14 +11,13 @@ import AddToQueue from "../components/AddToQueue";
 import NowPlaying from "../components/NowPlaying";
 import Devices from "../components/Devices";
 import PageWithIntl from "../components/PageWithIntl";
-import { FormattedMessage } from "react-intl";
 
 class Main extends React.Component {
   static getInitialProps({ req, store, isServer }) {
     return Promise.all([
       store.dispatch(fetchQueue()),
       store.dispatch(fetchUsers()),
-      store.dispatch(fetchPlayingContext()),
+      store.dispatch(fetchPlayingContext())
     ]);
   }
   render() {
@@ -33,20 +31,12 @@ class Main extends React.Component {
           />
         ) : null}
         <div className="app">
-          <style jsx>
-            {`
-              .app {
-                margin: 20px;
-                padding: 20px;
-              }
-            `}
-          </style>
-          <div style={{ float: "left" }}>
+          <div className="queue-container">
             <Queue items={this.props.queue} session={this.props.session} />
             {this.props.session.user !== null ? <AddToQueue /> : null}
             {this.props.session.user !== null ? <Devices /> : null}
           </div>
-          <div style={{ float: "right", width: "150px" }}>
+          <div className="users-container">
             <Users items={this.props.users} />
           </div>
         </div>
@@ -55,11 +45,11 @@ class Main extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   playing: state.playback,
   queue: state.queue,
   users: state.users,
-  session: state.session,
+  session: state.session
 });
 
 export default withRedux(initStore, mapStateToProps, null)(PageWithIntl(Main));
