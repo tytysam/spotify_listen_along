@@ -12,7 +12,11 @@ const Header = ({ session, muted, mutePlayback, unmutePlayback, login }) => (
   <div className="header-container">
     <Link href="/">
       <a className="link-base main-link">
-        <img src="/images/listen-along-wordmark-dark.svg" height="75" />
+        <img
+          src="/images/listen-along-wordmark-dark.svg"
+          height="75"
+          alt="Listen Along wordmark"
+        />
       </a>
     </Link>
     {session.user ? (

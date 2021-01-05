@@ -38,6 +38,10 @@ export default class IntlDocument extends Document {
             name="viewport"
             content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
           />
+          <script
+            src="https://kit.fontawesome.com/0f84f97a69.js"
+            crossOrigin="anonymous"
+          ></script>
         </Head>
         <body className="custom_class">
           {this.props.customValue}
