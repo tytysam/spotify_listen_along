@@ -31,12 +31,12 @@ class Main extends React.Component {
           />
         ) : null}
         <div className="app">
-          <div className="queue-container">
+          <div className="row justify-content-center p-2 queue-container">
             <Queue items={this.props.queue} session={this.props.session} />
             {this.props.session.user !== null ? <AddToQueue /> : null}
             {this.props.session.user !== null ? <Devices /> : null}
           </div>
-          <div className="users-container">
+          <div className="row justify-content-center p-2 users-container">
             <Users items={this.props.users} />
           </div>
         </div>
