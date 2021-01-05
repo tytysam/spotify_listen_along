@@ -40,14 +40,10 @@ class NowPlaying extends React.PureComponent {
       ).toFixed(2) + "%";
     const userName = this.props.user.display_name || this.props.user.id;
     return (
-      <div className="now-playing">
+      <div className="now-playing-container">
         <div className="now-playing__text media">
           <div className="media__img">
-            <img
-              src={this.props.track.album.images[1].url}
-              width="170"
-              height="170"
-            />
+            <img className="" src={this.props.track.album.images[1].url} />
           </div>
           <div className="now-playing__bd media__bd">
             <div className="now-playing__track-name">
