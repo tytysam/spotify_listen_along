@@ -32,7 +32,7 @@ export default class IntlDocument extends Document {
 
           <link
             rel="shortcut icon"
-            href="/images/listen-along-wordmark-dark.svg"
+            href="/images/listen-along-favicon-dark.svg"
           />
           <meta
             name="viewport"
