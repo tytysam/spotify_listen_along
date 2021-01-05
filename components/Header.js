@@ -47,7 +47,7 @@ const Header = ({ session, muted, mutePlayback, unmutePlayback, login }) => (
     {session.user ? (
       <div className="playback-control">
         <button
-          className="btn btn--dark"
+          className="btn--base btn--dark"
           onClick={() => {
             muted ? unmutePlayback() : mutePlayback();
           }}
