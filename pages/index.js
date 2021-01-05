@@ -1,6 +1,7 @@
 import React from "react";
 import withRedux from "next-redux-wrapper";
 import Layout from "../components/MyLayout.js";
+import About from "../components/About.js";
 import { initStore } from "../store/store";
 import { fetchQueue } from "../actions/queueActions";
 import { fetchUsers } from "../actions/usersActions";
@@ -31,14 +32,17 @@ class Main extends React.Component {
           />
         ) : null}
         <div className="core-app-container">
-          <div className="queue-container">
+          <div className="queue-container container">
             <Queue items={this.props.queue} session={this.props.session} />
             {this.props.session.user !== null ? <AddToQueue /> : null}
           </div>
-          <div className="users-container">
+          <div className="users-container container">
             <Users items={this.props.users} />
             {this.props.session.user !== null ? <Devices /> : null}
           </div>
+        </div>
+        <div className="about-container container">
+          <About />
         </div>
       </Layout>
     );
