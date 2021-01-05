@@ -17,19 +17,21 @@ class Devices extends React.PureComponent {
       transferPlaybackToDevice
     } = this.props;
     return (
-      <div style={{ paddingBottom: "10px" }}>
-        <h2>
-          <FormattedMessage id="devices.title" />
-        </h2>
-        <button
-          className="btn btn--dark"
-          disabled={isFetching}
-          onClick={() => {
-            fetchAvailableDevices();
-          }}
-        >
-          <FormattedMessage id="devices.fetch" />
-        </button>
+      <div className="row justify-content-center p-2">
+        <div className="col-12">
+          <h2 className="devices-heading">
+            <FormattedMessage id="devices.title" />
+          </h2>
+          <button
+            className="btn dark fetch-devices-btn"
+            disabled={isFetching}
+            onClick={() => {
+              fetchAvailableDevices();
+            }}
+          >
+            <FormattedMessage id="devices.fetch" />
+          </button>
+        </div>
         {devices.length === 0 ? (
           <p>
             <FormattedMessage id="devices.empty" />
@@ -41,9 +43,12 @@ class Devices extends React.PureComponent {
                 <tr>
                   <td>
                     {device.is_active ? (
-                      <strong>Active -&gt;</strong>
+                      <strong>
+                        Active <i class="far fa-arrow-alt-circle-right"></i>
+                      </strong>
                     ) : (
                       <button
+                        className="btn dark transfer-devices-btn"
                         onClick={() => {
                           transferPlaybackToDevice(device.id);
                         }}
@@ -54,7 +59,7 @@ class Devices extends React.PureComponent {
                   </td>
                   <td>{device.name}</td>
                   <td>{device.type}</td>
-                  <td>{device.volume}</td>
+                  {/* <td>{device.volume}</td> */}
                 </tr>
               ))}
             </tbody>
