@@ -2,8 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { FormattedMessage } from "react-intl";
 
-import ButtonStyle from "./ButtonStyle";
-import ButtonDarkStyle from "./ButtonDarkStyle";
 import {
   fetchAvailableDevices,
   transferPlaybackToDevice
@@ -23,8 +21,6 @@ class Devices extends React.PureComponent {
         <h2>
           <FormattedMessage id="devices.title" />
         </h2>
-        <style jsx>{ButtonStyle}</style>
-        <style jsx>{ButtonDarkStyle}</style>
         <button
           className="btn btn--dark"
           disabled={isFetching}
