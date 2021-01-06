@@ -6,7 +6,7 @@
   "scripts": {
     "build": "next build",
     "dev": "node server/server.js",
-    "start": "NODE_ENV=production node server/server.js",
+    "start": "node server/server.js",
     "heroku-postbuild": "npm run build",
     "precommit": "lint-staged"
   },
