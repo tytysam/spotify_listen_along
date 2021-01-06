@@ -32,11 +32,11 @@ class Main extends React.Component {
           />
         ) : null}
         <div className="core-app-container">
-          <div className="queue-container container">
+          <div className="queue-container ">
             <Queue items={this.props.queue} session={this.props.session} />
             {this.props.session.user !== null ? <AddToQueue /> : null}
           </div>
-          <div className="users-container container">
+          <div className="users-container ">
             <Users items={this.props.users} />
             {this.props.session.user !== null ? <Devices /> : null}
           </div>
