@@ -41,7 +41,7 @@ class NowPlaying extends React.PureComponent {
     const userName = this.props.user.display_name || this.props.user.id;
     return (
       <div className="now-playing-container row justify-content-center p-3">
-        <div className="col-md-12">
+        <div className="col-lg-12">
           <div className="now-playing-img-container">
             <img className="" src={this.props.track.album.images[1].url} />
           </div>
@@ -72,7 +72,7 @@ class NowPlaying extends React.PureComponent {
             </div>
             <div className="user-name">{userName}</div>
           </div>
-          <div className="now-playing-progress row justify-content-center p-3">
+          <div className="now-playing-progress justify-content-center p-1">
             <div
               className="now-playing-progress-bar"
               style={{ width: percentage }}
