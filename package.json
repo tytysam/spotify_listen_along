@@ -6,8 +6,7 @@
   "scripts": {
     "build": "next build",
     "dev": "node server/server.js",
-    "start": "NODE_ENV=production node server/server.js",
-    "heroku-postbuild": "npm run build"
+    "start": "NODE_ENV=production node server/server.js"
   },
   "keywords": [],
   "author": "",
@@ -42,6 +41,6 @@
     "prettier": "^1.7.4"
   },
   "engines": {
-    "node": "14.15"
+    "node": "8.4"
   }
 }
