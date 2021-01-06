@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "next build",
-    "dev": "next",
-    "start": "next start -p $PORT",
+    "dev": "node server/server.js",
+    "start": "NODE_ENV=production node server/server.js",
+    "heroku-postbuild": "npm run build",
     "precommit": "lint-staged"
   },
   "lint-staged": {
