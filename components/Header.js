@@ -10,20 +10,20 @@ const getNameFromUser = user => {
 
 const Header = ({ session, muted, mutePlayback, unmutePlayback, login }) => (
   <nav className="navbar-expand-md">
-    <div className="navbar-nav header mr-auto mx-5">
-      <div className="nav-item mx-3 p-2 wordmark-container">
+    <div className="navbar-nav header">
+      <div className="nav-item p-2 mx-5 wordmark-container">
         <Link href="/">
-          <a className="navbar-brand">
+          <a className="navbar-brand ">
             <img
+              className="listen-along-wordmark"
               src="/images/listen-along-wordmark-dark.svg"
-              height="75"
               alt="Listen Along wordmark"
             />
           </a>
         </Link>
       </div>
       {session.user ? (
-        <div className="nav-item mx-3 p-2 user-info-container">
+        <div className="nav-item mx-5 p-2 user-info-container">
           <img
             className="user-image"
             src={

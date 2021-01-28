@@ -23,6 +23,7 @@
 
 body {
   background-color: var(--primaryColorLight);
+  min-width: 525px;
 }
 
 .layout-base {
@@ -120,10 +121,17 @@ rest of the MVP finalized
   /* box-shadow: 0px 3px 15px rgba(32, 32, 32, 0.2); */
 }
 
+header {
+}
+
 .wordmark-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.listen-along-wordmark {
+  height: 75px;
 }
 
 .user-info-container {
@@ -512,4 +520,16 @@ rest of the MVP finalized
   overflow: hidden;
   _overflow: visible;
   zoom: 1;
+}
+
+/* 
+// ================= //
+//   MEDIA QUERIES   //
+// ================= //
+*/
+
+@media (max-width: 575.98px) {
+  .listen-along-wordmark {
+    height: 50px;
+  }
 }

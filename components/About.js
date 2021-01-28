@@ -12,7 +12,7 @@ const About = () => (
             <p className="about-main-text">
               Music connects. Over time, over distance. It can transcend death
               and bring disparate peoples together. Community within music has a
-              way of ekeing at something visceral within us, where rythm and
+              way of ekeing at something visceral within us, where rhythm and
               emotion bind us and words falter to describe the depth of what is
               being felt.
             </p>
