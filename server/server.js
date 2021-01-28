@@ -11,7 +11,7 @@ const compression = require("compression");
 const accepts = require("accepts");
 
 const dev = process.env.NODE_ENV !== "production";
-const nextApp = next({ dev });
+const nextApp = next({ dev: true });
 const nextHandler = nextApp.getRequestHandler();
 
 const cookieParser = require("cookie-parser");

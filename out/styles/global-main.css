@@ -1,0 +1,515 @@
+/* 
+// ============================ //
+//           MY LAYOUT          //
+// ============================ //
+*/
+
+* {
+  /* padding: 5px; */
+}
+
+:root {
+  --primaryColorLight: #fdfbf5;
+  --primaryColorDark: #202020;
+
+  --headerFont: "Recoleta", sans serif;
+
+  --SpotifyGreen: #1ed760;
+
+  --boxShadowColor: rgba(32, 32, 32, 0.3);
+
+  --onHoverHighlightLight: rgba(246, 168, 0, 0.2);
+}
+
+body {
+  background-color: var(--primaryColorLight);
+}
+
+.layout-base {
+  color: var(--primaryColorDark);
+  font-family: montserrat, sans-serif;
+  font-size: 18px;
+
+  background-color: var(--primaryColorLight);
+}
+
+#footer-container {
+  margin-bottom: 50px;
+}
+
+.made-with-love {
+  text-align: center;
+  margin: 0;
+  font-weight: 100;
+}
+
+.portfolio-link {
+  color: var(--primaryColorDark);
+  text-decoration: none;
+
+  transition: ease-in 150ms;
+}
+
+.portfolio-link:hover {
+  color: var(--primaryColorDark);
+
+  font-weight: 300;
+  transition: ease-in 150ms;
+}
+
+.back-to-top-arrow {
+  color: var(--primaryColorDark);
+
+  margin-left: 25px;
+}
+
+.back-to-top-arrow:hover {
+  color: var(--primaryColorDark);
+}
+
+/* 
+// ================= //
+//       MAIN       //
+// ================= //
+*/
+
+.core-app-container {
+}
+
+.queue-container {
+  margin-top: 75px;
+
+  min-width: 500px;
+}
+
+.users-container {
+  margin-top: 100px;
+
+  min-width: 500px;
+}
+
+.about-container {
+  margin-top: 75px;
+
+  min-width: 500px;
+}
+
+/* // ======================================================== // */
+
+/*
+*** to-do: 
+circle-back and clean up organization of CSS... 
+Temp., ~basic styling for now until I get the 
+rest of the MVP finalized 
+*/
+
+/* 
+// ============================ //
+//           COMPONENTS         // ===========================
+// ============================ //
+*/
+
+/* 
+// ================= //
+//      HEADER       //
+// ================= //
+*/
+
+.navbar {
+  /* background-color: var(--primaryColorLight); */
+  /* box-shadow: 0px 3px 15px rgba(32, 32, 32, 0.2); */
+}
+
+.wordmark-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-info-container img {
+  margin-right: 15px;
+}
+
+.user-name {
+}
+
+.login-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  margin: 15px auto;
+  /* padding: 20px 15px; */
+}
+
+.mute-unmute-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+// ================= //
+//    NOW PLAYING    //
+// ================= //
+*/
+
+.now-playing-container {
+  /* border: 1px solid var(--primaryColorDark); */
+  border-radius: 10px;
+  background-color: var(--primaryColorLight);
+  color: var(--primaryColorDark);
+  box-shadow: 0px 15px 30px var(--boxShadowColor);
+
+  min-height: 350px;
+
+  position: relative;
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 75px auto;
+}
+
+.now-playing-img-container {
+  padding: 20px;
+}
+
+.now-playing-img-container img {
+  max-height: 375px;
+  width: auto;
+
+  float: left;
+  margin-right: 35px;
+  margin-bottom: 15px;
+}
+
+.now-playing-details {
+  margin: 5px;
+  padding: 15px;
+}
+
+.now-playing-track-name {
+  margin-top: 10px;
+
+  font-size: 2.2em;
+  padding-top: 1em;
+
+  line-height: 1em;
+}
+
+.now-playing-artist-name {
+  font-size: 1.3em;
+  padding-top: 0.5em;
+
+  line-height: 1.2em;
+}
+
+.now-playing-user-info {
+  margin-top: 15px;
+  padding-right: 15px;
+}
+
+.now-playing-user-image-container img {
+  float: left;
+  margin-right: 10px;
+}
+
+.now-playing-progress {
+}
+
+.now-playing-progress-bar {
+  margin: 0 auto;
+
+  bottom: 0;
+  background-color: #222222;
+  height: 5px;
+  position: absolute;
+  width: 100%;
+}
+
+/* 
+// ================= //
+//       QUEUE       //
+// ================= //
+*/
+
+.queue {
+}
+
+.queue-header {
+  font-family: var(--headerFont);
+  font-size: 45px;
+  font-weight: 200px;
+}
+
+.queue-table {
+  margin-top: 15px;
+  width: 90%;
+}
+
+.queue-entry {
+}
+
+.queue-item-table-img {
+  padding-right: 15px;
+}
+
+.queue-item-table-data {
+  padding-right: 10px;
+}
+
+/* 
+// ================= //
+//   ADD TO QUEUE    //
+// ================= //
+*/
+
+.search-results-container {
+  border: 1px solid var(--primaryColorDark);
+  border-radius: 0px 0px 10px 10px;
+  list-style: none;
+  min-width: 500px;
+
+  padding-bottom: 10px;
+}
+
+.search-results-item {
+  padding: 5px 0px 10px 0px;
+  margin-top: 5px;
+}
+
+.search-results-item--focused {
+  background-color: rgba(32, 32, 32, 0.4);
+}
+
+.album-img {
+  float: left;
+  width: 64;
+  padding-right: 1.3em;
+}
+
+.flex-item {
+  flex-grow: 1;
+}
+
+.flex-item .song-name {
+  font-size: 1em;
+  margin-bottom: 0.3em;
+}
+
+.flex-item .artist-name {
+  font-size: 0.85em;
+}
+
+.add-to-queue {
+  min-width: 500px;
+}
+
+.search-input {
+  margin-top: 15px;
+  padding: 8px;
+  min-width: 500px;
+}
+
+/* 
+// ================= //
+//      DEVICES      //
+// ================= //
+*/
+
+.devices-container {
+  margin-top: 50px;
+}
+
+.devices-table {
+  max-width: 80%;
+  min-width: 400px;
+}
+
+.devices-heading {
+  margin-top: 50px;
+  margin-bottom: 10px;
+
+  font-family: var(--headerFont);
+  font-size: 45px;
+  font-weight: 200px;
+}
+
+.fetch-devices-btn {
+  padding: 1px 10px;
+  margin-bottom: 25px;
+
+  max-width: 150px;
+
+  font-weight: 300;
+}
+
+.transfer-devices-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 20px;
+}
+
+.transfer-devices-btn {
+  padding: 1px 10px;
+  /* margin-top: 25px; */
+
+  max-width: 150px;
+
+  font-weight: 300;
+}
+
+.fa-icon {
+  padding-left: 5px;
+}
+
+/* 
+// ================= //
+//       USERS       //
+// ================= //
+*/
+
+.users-container {
+}
+
+.user-list-header {
+  font-family: var(--headerFont);
+  font-size: 45px;
+  font-weight: 200px;
+}
+
+.user-list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+}
+
+.user-list-item {
+  padding-right: 25px;
+  margin-left: 25px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.user-image-container {
+  padding-right: 10px;
+}
+
+/* 
+// ================= //
+//       ABOUT       //
+// ================= //
+*/
+
+.about-text-container h1 {
+  transform: translateY(76px);
+
+  padding-left: 12px;
+  /* margin-bottom: 20px; */
+
+  font-family: var(--headerFont);
+  font-size: 55px;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+.inner-about-text-container {
+  border: 1px solid var(--primaryColorDark);
+  border-radius: 10px;
+
+  min-width: 275px;
+
+  padding: 75px 50px 30px 50px;
+  transition: box-shadow ease-in 250ms;
+}
+
+.inner-about-text-container:hover {
+  box-shadow: 0px 7px 15px var(--boxShadowColor);
+
+  transition: box-shadow ease-in 250ms;
+}
+
+.about-main-text {
+  font-weight: 500;
+}
+
+.about-sub-text {
+  font-weight: 300;
+}
+
+/* // ========================================================  // */
+
+/* 
+// ================= //
+//      BUTTONS      //
+// ================= //
+*/
+
+.spotify-login {
+  background-color: var(--SpotifyGreen);
+  color: var(--primaryColorLight);
+
+  font-weight: 600;
+
+  min-width: 215px;
+
+  border: none;
+  padding: 5px 20px;
+}
+
+.btn.unmute-mute {
+  border-radius: 15px;
+}
+
+.btn.dark {
+  background-color: var(--primaryColorDark);
+  border: 1px solid var(--primaryColorDark);
+  color: var(--primaryColorLight);
+  border-radius: 8px;
+
+  transition: ease-in 150ms;
+}
+
+.btn.dark:hover {
+  background-color: var(--primaryColorLight);
+  border: 1px solid var(--primaryColorDark);
+  color: var(--primaryColorDark);
+}
+
+/* 
+// ================= //
+//       FLEX        //
+// ================= //
+*/
+
+.user-image {
+  border-radius: 50%;
+}
+
+.user-name {
+  line-height: 30px;
+}
+
+.media {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1;
+}
