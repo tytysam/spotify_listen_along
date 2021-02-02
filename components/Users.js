@@ -1,7 +1,7 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
 
-export default ({ items }) => {
+const Users = ({ items }) => {
   return (
     <div className="row justify-content-center p-1">
       <h2 className="user-list-header">
@@ -35,3 +35,5 @@ export default ({ items }) => {
     </div>
   );
 };
+
+export default Users;
