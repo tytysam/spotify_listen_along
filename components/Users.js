@@ -17,7 +17,11 @@ const Users = ({ items }) => {
                 <img
                   className="user-image"
                   src={
-                    (i.images && i.images.length && i.images[0].url) ||
+                    (i &&
+                      i !== null &&
+                      i.images &&
+                      i.images.length &&
+                      i.images[0].url) ||
                     "/images/user-icon.svg"
                   }
                   width="30"
