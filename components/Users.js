@@ -10,7 +10,9 @@ const Users = ({ items }) => {
       <ul className="user-list col-12">
         {items.map((i, index) => {
           const userName =
-            i && i !== null ? i.display_name : "No user info available.";
+            i && i !== null
+              ? i.display_name || i.id
+              : "No user info available.";
           return (
             <li key={index} className="user-list-item">
               <div className="user-image-container">
